@@ -485,7 +485,6 @@ class ISA:
         """One's complement (inversion)"""
         pass
 
-
     def _cp(self, rd, rr):
         """Compare"""
         try:
@@ -536,7 +535,6 @@ class ISA:
         """Decrement register"""
         pass
 
-
     def _eor(self, rd, rr):
         """Exclusive OR two registers"""
         try:
@@ -560,21 +558,17 @@ class ISA:
         """Load an I/O Location to Register"""
         pass
 
-
     def _inc(self, rd):
         """Increment register"""
         pass
-
 
     def _ld(self, rd, xyz):
         """Load Indirect (different cases depending on second parameter)"""
         pass
 
-
     def _ldd(self, rd, yz):
         """Load inderect with Displacement (Y or Z only)"""
         pass
-
 
     def _ldi(self, rd, k):
         """Load Immediate (16 <= d <= 31)"""
@@ -593,7 +587,6 @@ class ISA:
         """Load Direct from SRAM (0 <= k <= 655355)"""
         pass
 
-
     def _lpm(self):
         """Load program memory (Z contains a byte address). Least significant
         bit of Z selects low byte of program word (if 0) or high byte (if 1)
@@ -605,11 +598,9 @@ class ISA:
         """Logical shift left"""
         pass
 
-
     def _lsr(self, rd):
         """Logical shift right"""
         pass
-
 
     def _mov(self, rd, rr):
         """Move between registers"""
@@ -658,21 +649,17 @@ class ISA:
         """Store register to I/O Location"""
         pass
 
-
     def _pop(self, rd):
         """Pop register from stack"""
         pass
-
 
     def _push(self, rr):
         """Push register on stack"""
         pass
 
-
     def _rcall(self, k):
         """Relative Subroutine Call (-2048 <= k <= 2047)"""
         pass
-
 
     def _ret(self):
         """Subroutine return"""
@@ -686,16 +673,13 @@ class ISA:
         """Relative Jump (-2048 <= k <= 2047)"""
         pass
 
-
     def _rol(self, rd):
         """Rotate left through carry"""
         pass
 
-
     def _ror(self, rd):
         """Rotate right through carry"""
         pass
-
 
     def _sbc(self, rd, rr):
         """Subtract two registers with carry"""
@@ -725,16 +709,13 @@ class ISA:
         """Set bit in I/O register (0 <= P <= 31)"""
         pass
 
-
     def _sbic(self, p, b):
         """Skip if bit in I/O register is cleared (0 <= P <= 31)"""
         pass
 
-
     def _sbis(self, p, b):
         """Skip if bit in I/O register is set (0 <= P <= 31)"""
         pass
-
 
     def _sbiw(self, rhrl, k):
         """Subtract immediate from word (0 <= K <= 63)"""
@@ -757,16 +738,13 @@ class ISA:
         """Set bit(s) in register (16 <= d <= 31)"""
         pass
 
-
     def _sbrc(self, rr, b):
         """Skip if bit in register is cleared"""
         pass
 
-
     def _sbrs(self, rr, b):
         """Skip if bit in register is set"""
         pass
-
 
     def _sec(self):
         """Set carry flag"""
@@ -792,7 +770,6 @@ class ISA:
         """Set register (16 <= d <= 31)"""
         pass
 
-
     def _ses(self):
         """Set signed flag"""
         return ISA._instructions["SES"]
@@ -817,16 +794,13 @@ class ISA:
         """Store Indirect (different cases depending on second parameter)"""
         pass
 
-
     def _std(self, yzq, rr):
         """Store indirect with displacement (Y or Z only)"""
         pass
 
-
     def _sts(self, k, rr):
         """Store direct to SRAM"""
         pass
-
 
     def _sub(self, rd, rr):
         """Subtract two registers"""
@@ -856,11 +830,9 @@ class ISA:
         """Swap nibbles (i.e. high 4 bits is exchanged with low 4 bits)"""
         pass
 
-
     def _tst(self, rd):
         """Test for zero or minus"""
         pass
-
 
     def _wdr(self):
         """Watchdog reset"""
